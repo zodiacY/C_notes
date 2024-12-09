@@ -10,3 +10,11 @@
     c. timer超时重复发送msg_send；counter++；   
     d. uart_tx线程异步等待，接收/解析ACK；  
     e. 对应timer stop；copy/flag 清0；  
+
+## 2.非阻塞形式
+1. 消息发送（当前FAN/IPD/HERATBEAT）
+2. wait ACK；macro TMEOUT 300ms；
+3. 超时重发；
+4. 最合理做法：TX/RX拆分
+5. 发送器msg copy; flag_ACK=0; send event；
+6. TX_thread发送后阻塞等待RX解析到ACK；flag_ACK=1; end; flag_ACK=0; 
