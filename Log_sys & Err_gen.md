@@ -44,12 +44,12 @@ const char *test_str_plus6 = ENUM_TO_STR_PLUS_6(ONE);
     LOG_I("strs1=%s strs2=%s\n", *test_strs, *(test_strs + 1));
     LOG_I("strs_plus=%s\n", test_str_plus6);
 ```
-
 [16836] I/NO_TAG: str=ONE 
 
 [16836] I/NO_TAG: strs1=ONE strs2=TWO 
 
 [16836] I/NO_TAG: strs_plus=ONE66ONE 
+
 
 **本质是宏展开时 拼接token：**
 > http://blog.chinaunix.net/uid-27666459-id-3772549.html
@@ -73,6 +73,7 @@ const char *test_str_plus6 = ENUM_TO_STR_PLUS_6(ONE);
     rt_kprintf("\n");
 ```
 var1 = 1
+
 var2 = 2
 
 
@@ -105,11 +106,16 @@ var2 = 2
 
 ```
 [head][func_name]: test_init[LOG]:1 2
+
 [head][func_name]: test_init[LOG]:para empty
 
+
 [16838] I/NO_TAG: [STLOG]:ONE TWO
+
 [16838] I/NO_TAG: [STLOG]:1 2
+
 [16838] I/NO_TAG: [STLOG]: para empty
+
 
 ## ULOG
 > 参考 ulog.c
