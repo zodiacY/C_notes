@@ -34,5 +34,5 @@
 6. **禁止**在.c中通过 **extern** 的方式使用外部函数接口、变量,必须通过头文件调用；
 7. 添加C++调用C函数原型申明:
 ```C
-#if defined(__cplusplus)
+    #if defined(__cplusplus)
 extern "
