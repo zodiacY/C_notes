@@ -45,9 +45,9 @@ const char *test_str_plus6 = ENUM_TO_STR_PLUS_6(ONE);
     LOG_I("strs_plus=%s\n", test_str_plus6);
 ```
 结果：
-> [16836] I/NO_TAG: str=ONE 
-> [16836] I/NO_TAG: strs1=ONE strs2=TWO 
-> [16836] I/NO_TAG: strs_plus=ONE66ONE 
+-[16836] I/NO_TAG: str=ONE 
+-[16836] I/NO_TAG: strs1=ONE strs2=TWO 
+-[16836] I/NO_TAG: strs_plus=ONE66ONE 
 
 **本质是宏展开时 拼接token：**
 > http://blog.chinaunix.net/uid-27666459-id-3772549.html
